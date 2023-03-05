@@ -1,0 +1,349 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Roboto', sans-serif;
+}
+
+body,
+html {
+     overflow-x: hidden;
+}
+
+
+.flex-row {
+     display: flex;
+}
+
+.flex-col {
+     display: flex;
+     flex-direction: column;
+}
+
+/* Navbar  */
+nav {
+     width: 100%;
+     height: 10vh;
+     background-color: #0F0F0F;
+     color: white;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+}
+
+.brand-icon {
+     align-items: center;
+     gap: 5px;
+}
+
+.brand-icon i {
+     font-size: 1.5rem;
+}
+
+.brand-icon img {
+     height: 60px;
+}
+
+.search-box-voice {
+     gap: 20px;
+     align-items: center;
+}
+
+.search-box {
+     height: 35px;
+}
+
+.search-box input {
+     background-color: #0F0F0F;
+     border: 1px solid hsl(0, 0%, 30%);
+     height: 100%;
+     width: 30vw;
+     border-radius: 50px 0 0 50px;
+     padding: 0 0 0 20px;
+     color: #fff;
+     outline: none;
+}
+
+.search-box input:focus {
+     border: 1px solid hsl(240, 100%, 70%);
+}
+
+.search-icon-container {
+     height: 100%;
+     width: 50px;
+     border-radius: 0 50px 50px 0;
+     background-color: hsl(0, 0%, 30%);
+     align-items: center;
+     justify-content: center;
+}
+
+.voice-icon {
+     width: 35px;
+     height: 35px;
+     background-color: hsl(0, 0%, 10%);
+     transition: all 0.3s ease-in-out;
+     border-radius: 50%;
+     align-items: center;
+     justify-content: center;
+}
+
+.voice-icon:hover {
+     background-color: hsl(0, 0%, 30%);
+}
+
+.login-and-more {
+     gap: 25px;
+     /* height: 60px; */
+}
+
+.login-and-more i {
+     font-size: 1.2rem;
+}
+
+/* Aside */
+aside {
+     background-color: #0F0F0F;
+     width: 16vw;
+     height: 90vh;
+     min-width: 250px;
+     color: white;
+     /* overflow-y: scroll; */
+     position: relative;
+}
+
+.aside-container {
+     overflow-y: scroll;
+     overflow-x: hidden;
+     /* position: absolute; */
+     width: 100%;
+     height: 100%;
+}
+
+.aside-container::-webkit-scrollbar {
+     width: 0.5rem;
+}
+
+.aside-container::-webkit-scrollbar-thumb {
+     background-color: grey;
+     border-radius: 20px;
+     display: none;
+}
+
+aside:hover .aside-container::-webkit-scrollbar-thumb {
+     display: block;
+}
+
+.tabs-container {
+     padding: 10px;
+}
+
+.tab {
+     width: 100%;
+     height: 40px;
+     border-radius: 7px;
+     align-items: center;
+     gap: 20px;
+     padding: 0 0 0 10px;
+}
+
+
+.tab:hover,
+.active {
+     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hr {
+     width: 100%;
+     margin: 10px 0;
+     padding: 10px 0;
+     border: 1px solid grey;
+     border-width: 1px 0 1px 0;
+}
+
+.subscriptions-container {
+     gap: 10px;
+}
+
+.subscription {
+     align-items: center;
+     gap: 20px;
+     padding: 0 0 0 10px;
+}
+
+.subscription img {
+     border-radius: 50%;
+     width: 35px;
+     height: 35px;
+}
+
+.subscription-heading {
+     padding: 0 0 0 10px;
+}
+
+/* header */
+
+header {
+     width: 84vw;
+     height: 7vh;
+     background-color: #0f0f0f;
+     color: white;
+     align-items: center;
+     font-size: 0.8rem;
+     position: relative;
+}
+
+
+
+.header-active {
+     background-color: #fff;
+     color: black;
+}
+
+header ul {
+     width: 100%;
+     height: 100%;
+     list-style-type: none;
+     gap: 10px;
+     padding: 0 20px 0 20px;
+     overflow-x: scroll;
+     overflow-y: hidden;
+}
+
+header ul::-webkit-scrollbar {
+     height: 0.5rem;
+     /* background-color: peachpuff; */
+}
+
+header ul::-webkit-scrollbar-thumb {
+     background-color: grey;
+     border-radius: 20px;
+}
+
+header ul li {
+     /* border: 1px solid white; */
+     height: 4vh;
+     border-radius: 4px;
+     background-color: hsl(0, 0%, 25%);
+     padding: 7px 10px;
+     /* word-wrap: normal; */
+     word-break: keep-all;
+}
+
+.gradient {
+     width: 90px;
+     height: 7vh;
+     background-color: green;
+     background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 1) 100%);
+     z-index: 1;
+     position: fixed;
+     right: 0;
+     top: 10vh;
+}
+
+/* Main */
+main {
+     width: 84vw;
+     height: 83vh;
+     background-color: #0F0F0F;
+     color: #fff;
+     padding: 15px;
+     overflow-x: hidden;
+     overflow-y: scroll;
+}
+
+.cards-container {
+     flex-wrap: wrap;
+     justify-content: center;
+     /* align-content: center; */
+}
+
+.card {
+     width: 350px;
+     height: 430px;
+     border-radius: 5px;
+     margin: 10px;
+     transition: all 0.5s ease;
+     /* border: 1px solid white; */
+}
+
+.card button {
+     visibility: hidden;
+     border: none;
+     outline: none;
+     height: 30px;
+     margin: 5px;
+     border-radius: 30px;
+     color: #fff;
+     background-color: rgb(255, 255, 255, 0.1);
+     transition: all 0.5s ease;
+}
+
+.card:hover {
+     transform: scale(1.1);
+}
+
+.card:hover button {
+     visibility: visible;
+     cursor: pointer;
+}
+
+.card-info {
+     padding: 10px;
+     gap: 15px;
+}
+
+.card-info i {
+     display: none;
+}
+
+.card-info:hover i {
+     display: block;
+}
+
+.card-channel-info {
+     gap: 5px;
+}
+
+.card-video-title {
+     font-weight: 600;
+     width: 250px;
+}
+
+.card-channel-name,
+.card-channel-view {
+     font-size: 0.8rem;
+     color: rgb(185, 185, 185);
+}
+
+.card-video-img {
+     height: 60%;
+     width: 100%;
+}
+
+
+.card-channel-img {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+}
+
+@media screen and (max-width: 1380px) {
+     aside {
+          width: 5vw;
+          min-width: 85px;
+     }
+
+     .tab span {
+          display: none;
+     }
+
+     .subscriptions-container {
+          display: none;
+     }
+
+     header,
+     main {
+          width: 95vw;
+     }
+
+}
